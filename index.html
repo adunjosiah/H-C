@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <style>
         html, body, #map {
             width: 100%;
@@ -142,14 +143,14 @@
                 },
                 mouseover: highlightFeature,
             });
-            var popupContent = '<div style="text-align:center; font-weight:bold; color:navy; font-size:16px;">' + (feature.properties['Name'] !== null ? String(feature.properties['Name']) : 'No Title') + '</div>' + '<table>\
+            var popupContent = '<div style="text-align:center; font-weight:bold; color:navy; font-size:16px; font-family:Montserrat, sans-serif;">' + (feature.properties['Name'] !== null ? String(feature.properties['Name']) : 'No Title') + '</div>' + '<table style="font-family:Montserrat, sans-serif;">\
                     <tr style="visibility: hidden;">\
                         <th scope="row">Name</th>\
                         <td class="visible-with-data" id="Name">' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row" style="visibility: hidden;">Photo</th>\
-                        <td class="visible-with-data" id="Photo" style="text-align: center; padding-left: -10px; padding-bottom: 10px; position: relative; left: -30px;">' + (feature.properties['Photo'] !== null ? '<img src="./images/' + String(feature.properties['Photo']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '" width="400" height="300">' : '') + '</td>\
+                        <td class="visible-with-data" id="Photo" style="text-align: center; padding-left: -10px; padding-bottom: 10px; position: relative; left: -30px;">' + (feature.properties['Photo'] !== null ? '<img src="images/' + String(feature.properties['Photo']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '" width="400" height="300">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Category</th>\
@@ -186,11 +187,11 @@
                         animation: rainbow 3s linear infinite;\
                     }\
                 </style>\
-                <div style="text-align:center; margin-top:15px; size:100px; padding-top:15px; border-top:1px solid #ddd;">\
+                <div style="text-align:center; margin-top:15px; size:100px; padding-top:15px; border-top:1px solid #ddd; font-family:Montserrat, sans-serif;">\
                     <p class="rainbow-border" style="font-weight:bold; margin-bottom:10px; display:inline-block;">Do you have a pass for this venue?</p>\
                     <div>\
-                        <button onclick="window.open(\'https://www.lagride.ng\', \'_blank\')" style="padding:8px 20px; margin:5px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer; font-size:14px;">Yes</button>\
-                        <button onclick="window.open(\'https://www.eventbrite.com\', \'_blank\')" style="padding:8px 20px; margin:5px; background-color:#f44336; color:white; border:none; border-radius:4px; cursor:pointer; font-size:14px;">No</button>\
+                        <button onclick="window.open(\'https://www.lagride.ng\', \'_blank\')" style="padding:8px 20px; margin:5px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer; font-size:14px; font-family:Montserrat, sans-serif;">Yes</button>\
+                        <button onclick="window.open(\'https://www.eventbrite.com\', \'_blank\')" style="padding:8px 20px; margin:5px; background-color:#f44336; color:white; border:none; border-radius:4px; cursor:pointer; font-size:14px; font-family:Montserrat, sans-serif;">No</button>\
                     </div>\
                 </div>';
             
