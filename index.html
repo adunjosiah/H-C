@@ -149,7 +149,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row" style="visibility: hidden;">Photo</th>\
-                        <td class="visible-with-data" id="Photo" style="text-align: center; padding-left: -10px; padding-bottom: 10px; position: relative; left: -30px;">' + (feature.properties['Photo'] !== null ? '<img src="images/' + String(feature.properties['Photo']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '" width="400" height="300">' : '') + '</td>\
+                        <td class="visible-with-data" id="Photo" style="text-align: center; padding-left: -10px; padding-bottom: 10px; position: relative; left: -30px;">' + (feature.properties['Photo'] !== null ? '<img src="./images/' + String(feature.properties['Photo']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '" width="400" height="300">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Category</th>\
